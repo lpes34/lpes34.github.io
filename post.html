@@ -55,7 +55,7 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+  <header class="masthead" style="background-image: url('img/odom_crop')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -116,12 +116,26 @@
             </b> - Deslocamento da roda direita/esquerda.</p>
 
           <p>A leitura dos sinais é feita pelo nodo /r_client_node e publica a informação no topic /pid_data. Para realizar
-            a odometria foi criado um novo nodo /odometry_publisher que realiza o calculo da odometria !!!!!!!!!!!!!acabar</p>
+            a odometria foi criado um novo nodo /odometry_publisher que realiza o cálculo da odometria e publica os resultados.
+            O diagrama de funcionamento pode ser visto na figura a baixo.</p>
+          <a href="#">
+            <img class="img-fluid" src="img/rqt_odom_crop.png" alt="">
+          </a>
+
 
           <p>O resultado final pode ser representado em RVIZ tal como se pode ver na figura a baixo</p>
           <a href="#">
             <img class="img-fluid" src="img/odom_crop" alt="">
           </a>
+
+          <p>Para concluir a implementação da odometria é necessária realizar mais algumas tarefas. O valor dos encoders obtido
+            é um valor absoluto, pelo que quando a plataforma se desloca para trás é incrementado um valor positivo. Para
+            corrigir isto é necessário alterar o código do Ardunio Micro (CPU3). No entanto esta alteração deve ser cuidada
+            uma vez que o CPU2 compara o valor de referência (sempre positivo), com o valor obtido pelos encoders (que pode
+            ser negativo após a alteração do código). Assim, o código do CPU2 também deverá ser devidamente alterado. Quando
+            a odometria estiver corretamente implementada deverá ser testado de modo a verificar o erro associado a estimativa
+            da posição. Deverá também ser implementado a odometria a mais baixo nível (CPU2) e verificar se o erro associado
+            é menor.</p>
 
 
 
