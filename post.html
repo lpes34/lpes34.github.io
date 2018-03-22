@@ -77,7 +77,53 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>This blog is under construction. It will be updated soon</p>
+          <p>As últimas semanas foram utilizadas para realizar tutorias de ROS e ambientar-me com a plataforma. Após este processo
+            que decorreu sensivelmente ao longo das primeiras duas semanas foi possível iniciar a implementação da odometria.
+          </p>
+
+          <p>A odometria é um processo que permite estimar a variação de posição utilizando os dados do deslocamento dos motores.
+            Cada um dos motores do Robuter está equipado com um encoder que emite 8024 pulsos a cada volta. Sabendo o diâmetro
+            de cada roda, e consequentemente o perímetro, é possível fazer a relação entre um pulso do encoder e o deslocamento
+            da plataforma. </p>
+
+          <p>O deslocamento de uma roda pode ser definido pela seguinte expressão:</p>
+
+          <p>x = pulse / p_turn * 2 * PI * R</p>
+
+          <p>Sendo: </p>
+          <p>
+            <b>x</b> - o deslocamento de uma das rodas;</p>
+          <p>
+            <b>pulse</b> - o número de pulsos do encoder;</p>
+          <p>
+            <b>p_turn</b> - o número de pulsos de uma volta;</p>
+          <p>
+            <b>R</b> - o raio de uma roda.</p>
+
+          <p>O deslocamento linear pode ser definido pela média dos deslocamentos de cada uma das rodas. O deslocamento angular
+            pode ser definido pela seguinte expressão:</p>
+
+          <p>&Delta;th = 1 / Length * (xR - xL)</p>
+
+          <p>Sendo:</p>
+          <p>
+            <b>&Delta;th</b> - variação angular da plataforma;</p>
+          <p>
+            <b>Length
+            </b> - Distância entre as duas rodas;</p>
+          <p>
+            <b>xR/xL
+            </b> - Deslocamento da roda direita/esquerda.</p>
+
+          <p>A leitura dos sinais é feita pelo nodo /r_client_node e publica a informação no topic /pid_data. Para realizar
+            a odometria foi criado um novo nodo /odometry_publisher que realiza o calculo da odometria !!!!!!!!!!!!!acabar</p>
+
+          <p>O resultado final pode ser representado em RVIZ tal como se pode ver na figura a baixo</p>
+          <a href="#">
+            <img class="img-fluid" src="img/odom_crop" alt="">
+          </a>
+
+
 
           <!-- <h2 class="section-heading">The Final Frontier</h2>
 
