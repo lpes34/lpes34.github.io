@@ -140,6 +140,27 @@
                 acumulativos.
               </p>
 
+              <p>Esta semana apareceram novos problemas que atrasaram um pouco o trabalho. O computador do Robuter foi enviada
+                para a garantia uma vez que não ligava. Suspeita-se que seja um problema da fonte de alimentação. Para o
+                trabalho continuar, em vez de o programa ROS se encontrar em duas máquinas e fazerem a ligação ssh como foi
+                referido anteriormente, será utilizado apenas uma máquina temporariamente.</p>
+              <p>Também o movimento do Robuter deixou de ser fluido parando frequentemente quando deveriam manter uma velocidade
+                contínua. O problema foi identificado como sendo do botão de emergência que por vezes era ativado momentaneamente,
+                parando as rodas. O botão foi retirado e neste momento o robuter não tem botão de emergência. O problema
+                parece ter desaparecido e pensa-se que a origem do problema era de uma ligação e não do botão em si.</p>
+
+              <p>O nodo da hodometria foi alterado de maneira que quando o referencial da hodometria se afasta do referencial
+                do Hector Slam, a posição da hodometria é atualizada, sobrepondo os referenciais. A imagem a baixo mostra
+                os saltos que a hodometria teve de efetuar por se distanciar do Hector Slam.</p>
+
+              <a href="#">
+                <img class="img-fluid" src="img/odom_updated_by_hector.png" alt="">
+              </a>
+              <p>Como foi possível verificar na imagem anterior, a hodometria é pouco precisa efetuando múltiplos saldos para
+                não se distanciar do Hector Slam. Neste sentido, os parâmetros da hodometria foram atualizados com testes
+                experimentais, sendo o deslocamento indicado pelo Hector Slam semelhante ao da hodometria após as alterações.
+                </p>
+
 
 
 
