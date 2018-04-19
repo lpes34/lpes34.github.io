@@ -62,7 +62,7 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
             <h1>Semana #07</h1>
-            <h2 class="subheading">Hodometria e URDF</h2>
+            <h2 class="subheading">Atualização da Hodometria. Novos problemas de hardware ou software</h2>
             <span class="meta">Publicado por
               <a href="#">Luís Sarmento</a>
               a 14 de Abril, 2018</span>
@@ -147,7 +147,7 @@
               <p>Também o movimento do Robuter deixou de ser fluido parando frequentemente quando deveriam manter uma velocidade
                 contínua. O problema foi identificado como sendo do botão de emergência que por vezes era ativado momentaneamente,
                 parando as rodas. O botão foi retirado e neste momento o robuter não tem botão de emergência. O problema
-                parece ter desaparecido e pensa-se que a origem do problema era de uma ligação e não do botão em si.</p>
+                parece persistir pelo que a origem do problema poderá ser outra.</p>
 
               <p>O nodo da hodometria foi alterado de maneira que quando o referencial da hodometria se afasta do referencial
                 do Hector Slam, a posição da hodometria é atualizada, sobrepondo os referenciais. A imagem a baixo mostra
@@ -156,10 +156,11 @@
               <a href="#">
                 <img class="img-fluid" src="img/odom_updated_by_hector.png" alt="">
               </a>
-              <p>Como foi possível verificar na imagem anterior, a hodometria é pouco precisa efetuando múltiplos saldos para
+              <p>Como foi possível verificar na imagem anterior, a hodometria é pouco precisa, efetuando múltiplos saltos para
                 não se distanciar do Hector Slam. Neste sentido, os parâmetros da hodometria foram atualizados com testes
                 experimentais, sendo o deslocamento indicado pelo Hector Slam semelhante ao da hodometria após as alterações.
-                </p>
+                Devido aos problemas que tem ocorrido não foi possível obter uma imagem que ilustre os resultados.
+              </p>
 
 
 
