@@ -62,10 +62,10 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
             <h1>Semana #08</h1>
-            <h2 class="subheading">Esqueleto da dissertação e kurt navegation</h2>
+            <h2 class="subheading">Início da navegação semi-autónoma</h2>
             <span class="meta">Publicado por
               <a href="#">Luís Sarmento</a>
-              a 25 de Abril, 2018</span>
+              a 10 de Maio, 2018</span>
           </div>
         </div>
       </div>
@@ -77,11 +77,21 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>Esta semana foi iniciada a escrita da estrutura da dissertação. Foram indicados os capítulos principais e tópicos
-            da informação que deviam conter. Uma vez que a hodometria se encontra finalizada foi iniciada a escrita mais
-            detalhada desse capítulo.</p>
-          <p>A package kurt navigation foi adquirida. Esta package lê os dados adquiridos pelo laser e determina uma direção
-            em que o robô se pode deslocar. No entanto esta package ainda não foi testada. </p>
+          <p>A semana passada foi introduzida a opção de navegação autónoma. Foi introduzido o pacote teb_local_planer que faz
+            o planeamento de uma trajetória tendo em conta um mapa pré definido e os dados do laser. De modo a contornar
+            a introdução de um mapa pré definido o hectorSLAM foi utilizado de modo a fornecer em tempo real o mapa ao teb_local_planer.
+            </p>
+          <p>A semana passada houve problemas de CPU que atingia o máximo de processamento levando, por vezes, a movimentos
+            não fluidos. Este problema derivou do modo como foi definido a footprint do robo. O problema já foi corrigido
+            pelo que é possível realizar a navegação autónoma com facilidade.
+          </p>
+          <P>Foi introduzido um novo nodo que permite optar por uma navegação manual ou autónoma. Este nodo subscreve aos tópicos
+            provenientes do teb_local_planer e do joy_node. Assim, o botão LT do comando XBox continua a ser o dead men switch,
+            sendo sempre necessário ser pressionado para a plataforma se deslocar. Quando apenas este botão é pressionado
+            o modo automático está ativo. Quando o botão RT é pressionado em simultâneo com o LT o modo automático é desativado
+            e é alterado para o modo manual passando a ser feito o controlo no comando. </P>
+
+          <p>A escrita do capítulo 3 da tese foi terminada.</p>
 
 
 
